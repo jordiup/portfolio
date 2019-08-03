@@ -80,6 +80,13 @@ export const PicContainer = styled.div
 		background-size: contain;
 	}	
 
+  * > {
+    &:hover{
+      transition: all .2s ease;
+      transform: scale(1.02);
+    }
+  
+  }
 	
 	`
 

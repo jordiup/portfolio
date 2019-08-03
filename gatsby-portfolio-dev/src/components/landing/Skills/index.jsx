@@ -15,9 +15,11 @@ export const Skills = () => (
 				<p>
 					Download my latest resume to see my experiences.
 				</p>
-				<Button as={AnchorLink} href="#contact" className="darkmode-ignore">
+
+				<Button href="https://drive.google.com/open?id=1nulEXvdBl0egaAmG7t1ixQjNhOyMomk5" target="_blank" className="darkmode-ignore">
 					Download
 				</Button>
+
 			</Details>
 		</SkillsWrapper>
 	</Wrapper>

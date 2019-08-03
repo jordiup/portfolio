@@ -614,12 +614,15 @@ export const Global = createGlobalStyle`
       -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
       -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
       font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    }
 
+    }
+    body::selection  {
+      background: #53e066;
+    }
     a {
       text-decoration: none;
       font-weight: bold;
-
+      color: black;      
     }
 
     a:visited {
@@ -632,6 +635,9 @@ export const Global = createGlobalStyle`
         outline: none;
       }
     }
+
+    // Custome styles 
+    
   
 
 

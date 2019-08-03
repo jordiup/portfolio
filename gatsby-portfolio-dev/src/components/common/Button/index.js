@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const Button = styled.a`
 	cursor: pointer;
 	border-radius: 3px;
 	padding: 0.7rem 2.5rem;
@@ -14,6 +14,8 @@ export const Button = styled.button`
 	user-select: none;
 	color: #fff;
 	background: #38D39F;
+	transition: .2s ease;
+	color: white !important;
 
 	// font-family: sans-serif;
 
@@ -23,6 +25,12 @@ export const Button = styled.button`
 
 	&:disabled {
 		background: gray;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+		background-color: #69e8bd;
+
 	}
 	
 

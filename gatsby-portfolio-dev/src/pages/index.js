@@ -17,11 +17,13 @@ var options = {
   // autoMatchOsTheme: true // default: true
 }
 
-const darkmode = new Darkmode(options);
-darkmode.showWidget();
-if (darkmode.isActivated() && options.saveInCookies == false){
-	darkmode.toggle();
-}
+  if (typeof window !== `undefined`) {
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+    if (darkmode.isActivated() && options.saveInCookies == false){
+      darkmode.toggle();
+    }
+  }
 
 export default () => (
 	<Layout>
