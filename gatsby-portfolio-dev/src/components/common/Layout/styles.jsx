@@ -6,7 +6,6 @@ export const Global = createGlobalStyle`
     // font-family: 'Roboto', Helvetica, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-
     article,
     aside,
     details,
