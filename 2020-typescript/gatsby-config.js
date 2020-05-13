@@ -2,7 +2,7 @@ require("ts-node").register({ files: true })
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Jordi Hermoso Clarke's Portfolio Website`,
     description: ``,
     author: `@jordiup`,
   },
