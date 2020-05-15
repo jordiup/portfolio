@@ -4,6 +4,8 @@ import { ColourModeHookTester } from '../components/colourModeButton';
 import { Header } from '../components/header';
 import { SEO } from '../components/seo';
 import { Footer } from '../components/footer';
+import { GithubProjects } from '../components/githubProjects';
+import { GridPics } from '../components/gridPics';
 
 const IndexPage = () => {
 	return (
@@ -11,6 +13,7 @@ const IndexPage = () => {
 			<SEO />
 			<Header />
 			<Box p={5}>
+				<GridPics />
 				<Heading size="md" mb={5}>
 					About
 				</Heading>
@@ -22,6 +25,7 @@ const IndexPage = () => {
 					always interested in learning something new.
 				</Text>
 				<ColourModeHookTester />
+				<GithubProjects />
 			</Box>
 			<Footer />
 		</>

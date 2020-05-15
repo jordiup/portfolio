@@ -1,3 +1,9 @@
+const path = require('path');
+
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
 	siteMetadata: {
 		title: `Jordi Hermoso`,
@@ -27,6 +33,18 @@ module.exports = {
 				 * if false, this plugin will not use <ColorModeProvider />
 				 */
 				isUsingColorMode: true
+			}
+		},
+		{
+			resolve: 'gatsby-source-graphql',
+			options: {
+				typeName: 'GitHub',
+				fieldName: 'github',
+				url: 'https://api.github.com/graphql',
+				headers: {
+					Authorization: `bearer ${process.env.GITHUB_TOKEN}`
+				},
+				fetchOptions: {}
 			}
 		}
 		// {

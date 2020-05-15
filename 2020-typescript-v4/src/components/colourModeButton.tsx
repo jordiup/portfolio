@@ -13,7 +13,7 @@ export const ColourModeHookTester = () => {
 			<Button
 				variantColor="teal"
 				onClick={toggleColorMode}
-				position="absolute"
+				position="fixed"
 				bottom={5}
 				right={5}
 				rounded="50%"

@@ -13,7 +13,7 @@ export const Footer = props => {
 			flexDirection="row"
 			wrap="wrap"
 			padding="1.5rem"
-			position="absolute"
+			// position="fixed"
 			bottom="0px"
 			{...props}
 		>

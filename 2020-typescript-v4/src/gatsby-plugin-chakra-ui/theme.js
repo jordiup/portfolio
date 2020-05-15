@@ -1,6 +1,8 @@
+import React from 'react';
 import colors from './colors';
 import sizes, { baseSizes } from './sizes';
 import typography from './typography';
+import chakraIcons from '@chakra-ui/core/dist/IconPaths';
 
 const space = baseSizes;
 
@@ -73,6 +75,31 @@ const borders = {
 //   none: 0
 // };
 
+const customIcons = {
+	star: {
+		path: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16">
+				<path
+					fill-rule="evenodd"
+					d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+				/>
+			</svg>
+		),
+		viewBox: '0 0 14 16'
+	},
+	gitFork: {
+		path: (
+			<svg xmlns="http://www.w3.org/2000/svg" width="10" height="16">
+				<path
+					fill-rule="evenodd"
+					d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
+				/>
+			</svg>
+		),
+		viewBox: '0 0 10 16'
+	}
+};
+
 const theme = {
 	breakpoints,
 	zIndices,
@@ -83,7 +110,11 @@ const theme = {
 	...typography,
 	sizes,
 	shadows,
-	space
+	space,
+	icons: {
+		...chakraIcons,
+		...customIcons
+	}
 };
 
 export default theme;
