@@ -11,15 +11,16 @@ export const ColourModeHookTester = () => {
 	return (
 		<>
 			<Button
-				variantColor="teal"
+				variantColor="green"
 				onClick={toggleColorMode}
 				position="fixed"
-				bottom={5}
-				right={5}
+				bottom="35px"
+				right={6}
 				rounded="50%"
 				height="40px"
 				width="40px"
 				display="flex"
+				zIndex={99}
 			>
 				<Text
 					position="absolute"

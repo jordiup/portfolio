@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import React from 'react';
-import { Box, Heading, Flex, Text, Button, Link } from '@chakra-ui/core';
+import { Box, Heading, Flex, Text, Button, Link, Icon } from '@chakra-ui/core';
 
 export const Footer = props => {
 	const [show, setShow] = React.useState(false);
@@ -13,9 +13,9 @@ export const Footer = props => {
 			flexDirection="row"
 			wrap="wrap"
 			padding="1.5rem"
-			// position="fixed"
 			bottom="0px"
 			{...props}
+			justifyContent="space-between"
 		>
 			<Flex flexDirection="column">
 				<Text as="h4" fontSize="lg" fontWeight="500">
@@ -37,7 +37,13 @@ export const Footer = props => {
 				</Text>
 				{/* <span>Illustrations by Katerina Limpitsouni - Undraw</span> */}
 			</Flex>
-			<Flex>
+			<Flex mr="38px">
+				<Link href="https://github.com/jordiup" mr={3}>
+					<Icon name="github" size="34px" />
+				</Link>
+				<Link href="https://linkedin.com/in/jordihermoso" mr={3}>
+					<Icon name="linkedin" size="34px" />
+				</Link>
 				{/* {social.map(({ id, name, link, icon }) => (
 					<a
 						key={id}

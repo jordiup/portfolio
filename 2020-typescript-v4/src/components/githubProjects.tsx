@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Flex, Box, Link, Heading, Icon } from '@chakra-ui/core';
+import { Flex, Box, Link, Heading, Icon, useColorMode } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 // import { Container, Card } from 'Common';
 // import starIcon from 'Static/icons/star.svg'
@@ -34,13 +34,13 @@ export const GridItem = styled(Box)`
 		transform: scale(1.02);
 	}
 
-	h4 {
+	/* h4 {
 		color: #212121;
-	}
+	} */
 
-	p {
+	/* p {
 		color: #707070;
-	}
+	} */
 `;
 
 const Content = styled(Box)`
@@ -57,18 +57,17 @@ const Stats = styled(Box)`
 			margin-right: 0.5rem;
 		}
 
-		img {
-			margin: 0;
-		}
-
 		span {
-			color: #000;
+			/* color: #000; */
 			margin-left: 0.5rem;
 		}
 	}
 `;
 
-export const GithubProjects = () => {
+export const GithubProjects = ({ props }) => {
+	const { ...rest } = props;
+	const { colorMode } = useColorMode();
+
 	const {
 		github: {
 			user: {
@@ -102,7 +101,7 @@ export const GithubProjects = () => {
 	`);
 
 	return (
-		<Flex id="projects" flexDirection="column">
+		<Flex id="projects" flexDirection="column" {...rest}>
 			<Heading size="md" mb={5}>
 				<Link href="https://github.com/jordiup">Projects</Link>
 			</Heading>
@@ -124,12 +123,12 @@ export const GithubProjects = () => {
 							</Content>
 							<Stats>
 								<div>
-									<Icon name="star" alt="star" />
+									<Icon name="star" alt="star" color="red" />
 									{/* <img src={starIcon} alt="stars" /> */}
 									<span>{node.stargazers.totalCount}</span>
 								</div>
 								<div>
-									<Icon name="gitFork" alt="forks" />
+									<Icon name="gitFork" alt="forks" color="purple" />
 									<span>{node.forkCount}</span>
 								</div>
 							</Stats>

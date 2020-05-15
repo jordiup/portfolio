@@ -1,6 +1,7 @@
 import React from 'react';
 import Tilt from 'react-tilt';
 import styled from '@emotion/styled';
+import { Box } from '@chakra-ui/core';
 
 export const Item1 = styled(Tilt)`
 	background-color: orangered;
@@ -25,17 +26,11 @@ export const Item4 = styled(Tilt)`
 	grid-row: 1/3;
 	grid-column: 2/3;
 	width: 100%;
-
-	// &:hover {
-	//   transform: rotateY(-180deg);
-	// }
 `;
 export const Item5 = styled(Tilt)`
 	background-color: royalblue;
 	background-image: url('../imgs/5.jpg');
 	margin: 10px 10px 10px 20px;
-	// height: 70%;
-	// width: 70%;
 `;
 export const Item6 = styled(Tilt)`
 	background-color: goldenrod;
@@ -50,10 +45,12 @@ export const PicContainer = styled.div`
 	grid-template-rows: repeat(2, 150px);
 	grid-template-columns: 200px 250px 200px;
 
+	@media (max-width: 660px) {
+		grid-template-columns: 30vw 40vw 30vw;
+	}
+
 	font-size: 1.5rem;
 	color: white;
-
-	// margin: 0 25%;
 
 	justify-content: center;
 
@@ -88,22 +85,6 @@ export const PicContainer = styled.div`
 	}
 `;
 
-export const Wrapper = styled.div`
-	padding-bottom: 4rem;
-	/* background-image: url('../illustrations/overlay.svg'); */
-	background-size: contain;
-	background-position: right top;
-	background-repeat: no-repeat;
-
-	.Tilt {
-		background: orange;
-
-		&-inner {
-			background: grey;
-		}
-	}
-`;
-
 export const IntroWrapper = styled.div`
 	padding: 4rem 0;
 	display: flex;
@@ -132,8 +113,7 @@ const tiltOptions = {
 };
 
 export const GridPics = () => (
-	<Wrapper>
-		{/* <Header /> */}
+	<Box>
 		<IntroWrapper>
 			<PicContainer>
 				<Item1 options={tiltOptions}>
@@ -153,5 +133,5 @@ export const GridPics = () => (
 				</Item5>
 			</PicContainer>
 		</IntroWrapper>
-	</Wrapper>
+	</Box>
 );
