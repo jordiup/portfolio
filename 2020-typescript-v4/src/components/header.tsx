@@ -1,13 +1,23 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { Box, Heading, Flex, Text, Button, Link } from '@chakra-ui/core';
-import { SEO } from './seo';
 
 const MenuItems = ({ children }) => (
 	<Link
-		mt={{ base: 4, md: 0 }}
+		// mt={{ base: 4, md: 0 }}
 		mr={6}
 		display="block"
+		fontFamily="Eczar"
 		href={'#' + children.toString().toLowerCase()}
+		css={css`
+			text-decoration: none;
+			transition: all 0.2s ease;
+			&:hover {
+				transform: scale(1.02);
+				text-decoration: none;
+			}
+		`}
 	>
 		{children}
 	</Link>
@@ -18,46 +28,28 @@ export const Header = props => {
 	const handleToggle = () => setShow(!show);
 
 	return (
-		<Flex
-			as="nav"
-			align="center"
-			justify="space-between"
-			wrap="wrap"
-			padding="1.5rem"
-			// bg="teal.500"
-			// color="black"
-			{...props}
-		>
+		<Flex as="nav" flexDirection="row" wrap="wrap" padding="1.5rem" {...props}>
 			<Flex align="center" mr={5}>
 				<Link href="/">
-					<Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+					<Heading
+						as="h1"
+						size="lg"
+						letterSpacing={'-.1rem'}
+						css={css`
+							&hover: text-decoration: none;
+							text-decoration: none;
+						`}
+					>
 						Jordi Hermoso
 					</Heading>
 				</Link>
 			</Flex>
 
-			<Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
-				<svg
-					fill="white"
-					width="12px"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<title>Menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-				</svg>
-			</Box>
-
-			<Box
-				display={{ sm: show ? 'block' : 'none', md: 'flex' }}
-				width={{ sm: 'full', md: 'auto' }}
-				alignItems="center"
-				flexGrow={1}
-			>
+			<Flex alignItems="center" ml="auto">
 				<MenuItems>About</MenuItems>
 				<MenuItems>Projects</MenuItems>
 				<MenuItems>Resume</MenuItems>
-			</Box>
+			</Flex>
 
 			{/* <Box
 				display={{ sm: show ? 'block' : 'none', md: 'block' }}

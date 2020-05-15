@@ -29,6 +29,19 @@ module.exports = {
 				isUsingColorMode: true
 			}
 		}
+		// {
+		// PROPERLY CONFIGURE THIS LATER FOR PWA
+		// 	resolve: `gatsby-plugin-manifest`,
+		// 	options: {
+		// 		name: `Jordi Hermoso`,
+		// 		short_name: `Jordi`,
+		// 		start_url: `/`,
+		// 		background_color: `#f7f0eb`,
+		// 		theme_color: `#a2466c`,
+		// 		display: `standalone`
+		// 	}
+		// },
+		// `gatsby-plugin-offline`
 	]
 };
 

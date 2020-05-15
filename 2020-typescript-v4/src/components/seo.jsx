@@ -53,6 +53,8 @@ export const SEO = ({ description, lang, meta, title }) => {
 				href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap"
 				rel="stylesheet"
 			></link>
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		</Helmet>
 	);
 };

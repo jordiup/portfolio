@@ -1,8 +1,9 @@
-import { Box, Heading } from '@chakra-ui/core';
+import { Box, Heading, Text } from '@chakra-ui/core';
 import React from 'react';
-import { ColourModeHookTester } from '../components/colourModeHookTester';
+import { ColourModeHookTester } from '../components/colourModeButton';
 import { Header } from '../components/header';
 import { SEO } from '../components/seo';
+import { Footer } from '../components/footer';
 
 const IndexPage = () => {
 	return (
@@ -11,10 +12,18 @@ const IndexPage = () => {
 			<Header />
 			<Box p={5}>
 				<Heading size="md" mb={5}>
-					This is a test heading
+					About
 				</Heading>
+				<Text>
+					I'm a Frontend Developer specializing in React. I've just graduated
+					with a Computer Science degree. I have a strong passion for software
+					development, design and data analysis. As well as the way these can
+					impact people and businesses around the world. I'm hardworking, and
+					always interested in learning something new.
+				</Text>
 				<ColourModeHookTester />
 			</Box>
+			<Footer />
 		</>
 	);
 };
