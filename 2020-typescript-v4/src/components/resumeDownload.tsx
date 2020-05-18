@@ -3,6 +3,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Box, Heading } from '@chakra-ui/core';
 import { Button } from './button';
+import { Section } from './section';
 // import dev from 'Static/illustrations/progress-tracking.svg'
 
 export const Wrapper = styled(Box)`
@@ -25,7 +26,7 @@ export const SkillsWrapper = styled(Box)`
 
 export const Details = styled(Box)`
 	flex: 1;
-	padding-left: 2rem;
+	/* padding-left: 2rem; */
 
 	@media (max-width: 960px) {
 		padding-left: unset;
@@ -64,28 +65,30 @@ export const ResumeDownload = props => {
 	const { ...rest } = props;
 
 	return (
-		<Wrapper id="about" {...rest}>
-			<SkillsWrapper>
-				{/* <Thumbnail>
+		<Section>
+			<Wrapper id="about" {...rest}>
+				<SkillsWrapper>
+					{/* <Thumbnail>
 				<img src={dev} alt="I’m Jordi and I’m a frontend engineer!" />
 			</Thumbnail> */}
-				<Details>
-					<Heading as="h1">Resume</Heading>
-					<Heading as="h2" color="#707070" size="lg" mt={3} fontWeight="500">
-						Download my latest resume to see my experiences.
-					</Heading>
+					<Details>
+						<Heading as="h1">Resume</Heading>
+						<Heading as="h2" color="#707070" size="lg" mt={3} fontWeight="500">
+							Download my latest resume to see my experiences.
+						</Heading>
 
-					<Button
-						as="a"
-						mt={6}
-						href="https://drive.google.com/open?id=1nulEXvdBl0egaAmG7t1ixQjNhOyMomk5"
-						target="_blank"
-						className="darkmode-ignore"
-					>
-						Download
-					</Button>
-				</Details>
-			</SkillsWrapper>
-		</Wrapper>
+						<Button
+							as="a"
+							mt={6}
+							href="https://drive.google.com/open?id=1nulEXvdBl0egaAmG7t1ixQjNhOyMomk5"
+							target="_blank"
+							className="darkmode-ignore"
+						>
+							Download
+						</Button>
+					</Details>
+				</SkillsWrapper>
+			</Wrapper>
+		</Section>
 	);
 };

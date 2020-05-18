@@ -14,7 +14,7 @@ export const ColourModeHookTester = () => {
 				variantColor="green"
 				onClick={toggleColorMode}
 				position="fixed"
-				bottom="35px"
+				bottom="20px"
 				right={6}
 				rounded="50%"
 				height="40px"

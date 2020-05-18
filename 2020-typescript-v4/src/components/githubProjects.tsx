@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Flex, Box, Link, Heading, Icon, useColorMode } from '@chakra-ui/core';
 import styled from '@emotion/styled';
+import { Section } from './section';
 // import { Container, Card } from 'Common';
 // import starIcon from 'Static/icons/star.svg'
 // import forkIcon from 'Static/icons/fork.svg'
@@ -101,41 +102,43 @@ export const GithubProjects = ({ props }) => {
 	`);
 
 	return (
-		<Flex id="projects" flexDirection="column" {...rest}>
-			<Heading size="md" mb={5}>
-				<Link href="https://github.com/jordiup">Projects</Link>
-			</Heading>
-			<Grid>
-				{edges.map(({ node }) => (
-					<GridItem
-						key={node.id}
-						as="a"
-						href={node.url}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Box p={3}>
-							<Content>
-								<Heading as="h4" size="sm">
-									{node.name}
-								</Heading>
-								<p>{node.description}</p>
-							</Content>
-							<Stats>
-								<div>
-									<Icon name="star" alt="star" color="red" />
-									{/* <img src={starIcon} alt="stars" /> */}
-									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<Icon name="gitFork" alt="forks" color="purple" />
-									<span>{node.forkCount}</span>
-								</div>
-							</Stats>
-						</Box>
-					</GridItem>
-				))}
-			</Grid>
-		</Flex>
+		<Section>
+			<Flex id="projects" flexDirection="column" {...rest}>
+				<Heading size="md" mb={5}>
+					<Link href="https://github.com/jordiup">Projects</Link>
+				</Heading>
+				<Grid>
+					{edges.map(({ node }) => (
+						<GridItem
+							key={node.id}
+							as="a"
+							href={node.url}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Box p={3}>
+								<Content>
+									<Heading as="h4" size="sm">
+										{node.name}
+									</Heading>
+									<p>{node.description}</p>
+								</Content>
+								<Stats>
+									<div>
+										<Icon name="star" alt="star" color="red" />
+										{/* <img src={starIcon} alt="stars" /> */}
+										<span>{node.stargazers.totalCount}</span>
+									</div>
+									<div>
+										<Icon name="gitFork" alt="forks" color="purple" />
+										<span>{node.forkCount}</span>
+									</div>
+								</Stats>
+							</Box>
+						</GridItem>
+					))}
+				</Grid>
+			</Flex>
+		</Section>
 	);
 };

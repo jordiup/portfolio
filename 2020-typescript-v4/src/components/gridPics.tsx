@@ -19,10 +19,12 @@ export const Item3 = styled(Tilt)`
 	background-image: url('../imgs/3.jpg');
 	margin: 10px 10px 10px 20px;
 `;
+// Potrait
 export const Item4 = styled(Tilt)`
 	background-color: palevioletred;
 	background-image: url('../imgs/16.jpg');
 	background-size: cover !important;
+	background-position: 30%;
 	grid-row: 1/3;
 	grid-column: 2/3;
 	width: 100%;

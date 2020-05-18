@@ -11,6 +11,7 @@ export const Footer = props => {
 		<Flex
 			as="footer"
 			flexDirection="row"
+			alignItems="center"
 			wrap="wrap"
 			padding="1.5rem"
 			bottom="0px"
@@ -18,9 +19,9 @@ export const Footer = props => {
 			justifyContent="space-between"
 		>
 			<Flex flexDirection="column">
-				<Text as="h4" fontSize="lg" fontWeight="500">
+				{/* <Heading as="h4" fontSize="xl" mb={3} fontWeight="500">
 					Jordi Hermoso
-				</Text>
+				</Heading> */}
 				<Text fontSize="sm">
 					© {new Date().getFullYear()} | Made with{' '}
 					<span aria-label="love" className="darkmode-ignore" role="img">
@@ -38,10 +39,10 @@ export const Footer = props => {
 				{/* <span>Illustrations by Katerina Limpitsouni - Undraw</span> */}
 			</Flex>
 			<Flex mr="38px">
-				<Link href="https://github.com/jordiup" mr={3}>
+				<Link href="https://github.com/jordiup" mr={5}>
 					<Icon name="github" size="34px" />
 				</Link>
-				<Link href="https://linkedin.com/in/jordihermoso" mr={3}>
+				<Link href="https://linkedin.com/in/jordihermoso" mr={5}>
 					<Icon name="linkedin" size="34px" />
 				</Link>
 				{/* {social.map(({ id, name, link, icon }) => (
