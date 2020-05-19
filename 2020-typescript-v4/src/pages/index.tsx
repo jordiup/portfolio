@@ -49,7 +49,7 @@ const IndexPage = () => {
 						developed with popular ui/ux software.
 					</Text>
 					<Stack isInline>
-						<Image src="../../static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png" />
+						<Image src="/static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png" />
 						<Image src="./static/portfolio/web/remedium.app_.png" />
 						<Image
 							src="../static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png"
