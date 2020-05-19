@@ -8,6 +8,7 @@ import { GithubProjects } from '../components/githubProjects';
 import { HeroGridPics } from '../components/heroGridPics';
 import { ResumeDownload } from '../components/resumeDownload';
 import { Section } from '../components/section';
+import { StaticImageGallery } from '../components/staticImageGallery';
 
 const IndexPage = () => {
 	return (
@@ -36,27 +37,29 @@ const IndexPage = () => {
 					</Box>
 				</Section>
 				<GithubProjects />
-				<ResumeDownload />
-				<Section>
+				<Section mt={6}>
 					<Heading size="md" mb={5}>
-						Web, UI & UX
+						Gallery
+						{/* Web, UI & UX */}
 					</Heading>
-					<Text>
+					{/* <Text>
 						This section of my portfolio showcases web design projects I've
 						undertaken. Projects have been carried out with a number of
 						companies, not-for-profit organisations, and startups. It showcases
 						work that is live on the web, as well as interactive prototypes
 						developed with popular ui/ux software.
-					</Text>
+					</Text> */}
 					<Stack isInline>
-						<Image src="/static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png" />
-						<Image src="./static/portfolio/web/remedium.app_.png" />
-						<Image
-							src="../static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png"
-							size="200px"
-						/>
+						<StaticImageGallery relativeDirectory={'web'} />
+						{/* <StaticImageGallery relativeDirectory={'graphic-design'} /> */}
+						{/* <Image src="/static/portfolio/web/2018-03-27-22-14-unearthedwa.com.png" /> */}
+						{/* <Image src="./static/portfolio/web/remedium.app_.png" /> */}
+						{/* <Image
+							src={'./portfolio/web/2018-03-27-22-14-unearthedwa.com.png'}
+						/> */}
 					</Stack>
 				</Section>
+				<ResumeDownload />
 			</Flex>
 			<ColourModeHookTester />
 			<Footer />

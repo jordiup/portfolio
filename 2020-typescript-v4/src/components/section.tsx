@@ -1,7 +1,13 @@
-import React from 'react';
-import { Flex } from '@chakra-ui/core';
+import React, { ReactChildren, ReactChild } from 'react';
+import { Flex, FlexProps } from '@chakra-ui/core';
 
-export const Section = ({ children }) => {
+export const Section = ({
+	children,
+	...rest
+}: {
+	children?: ReactChildren | ReactChild;
+	rest?: FlexProps;
+}) => {
 	return (
 		<Flex
 			width={[
@@ -12,6 +18,7 @@ export const Section = ({ children }) => {
 			]}
 			justifyContent="center"
 			flexDirection="column"
+			{...rest}
 		>
 			{children}
 		</Flex>

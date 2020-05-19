@@ -11,10 +11,11 @@
 - React Helmet SEO integration in <Header> component ✅
 - Full light/dark theming ✅
   - Improved light/dark themeing. Grays.
+- Add a portfolio section that showcases work (design + dev) ✅
+  - Make this on a seperate page?
 - Zeit (Vercel) og:image creation
 - 'How I Made This' section
 - Animated og meta title
-- Add a portfolio section that showcases work (design + dev)
 - Blog with Medium integration
 
 <!-- - Typography.js fonts -->

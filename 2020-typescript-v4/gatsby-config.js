@@ -47,8 +47,14 @@ module.exports = {
 				},
 				fetchOptions: {}
 			}
-		}
-		// {
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `portfolio-images`,
+				path: `./static/`
+			}
+		} // {
 		// 	// PROPERLY CONFIGURE THIS LATER FOR PWA
 		// 	resolve: `gatsby-plugin-manifest`,
 		// 	options: {
