@@ -9,6 +9,7 @@
 - Claim some cool domains ✅
 - gatsby-source-graphql for private api fetching ✅
 - React Helmet SEO integration in <Header> component ✅
+- Add Google Analytics ✅
 - Full light/dark theming ✅
   - Improved light/dark themeing. Grays.
 - Add a portfolio section that showcases work (design + dev) ✅

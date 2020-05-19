@@ -54,6 +54,12 @@ module.exports = {
 				name: `portfolio-images`,
 				path: `./static/`
 			}
+		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: 'UA-145106492-1'
+			}
 		} // {
 		// 	// PROPERLY CONFIGURE THIS LATER FOR PWA
 		// 	resolve: `gatsby-plugin-manifest`,
