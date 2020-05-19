@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Flex, Box, Link, Heading, Icon, useColorMode } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 import { Section } from './section';
-// import { Container, Card } from 'Common';
 // import starIcon from 'Static/icons/star.svg'
 // import forkIcon from 'Static/icons/fork.svg'
 // import { Wrapper, Grid, Item, Content, Stats } from './styles';
@@ -24,7 +23,7 @@ export const Grid = styled(Box)`
 	}
 `;
 
-export const GridItem = styled(Box)`
+export const GridItem = styled(Link)`
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -65,8 +64,8 @@ const Stats = styled(Box)`
 	}
 `;
 
-export const GithubProjects = ({ props }) => {
-	const { ...rest } = props;
+export const GithubProjects = () => {
+	// const { ...rest } = props;
 	const { colorMode } = useColorMode();
 
 	const {
@@ -101,44 +100,44 @@ export const GithubProjects = ({ props }) => {
 		}
 	`);
 
+	console.log(edges);
+
 	return (
 		<Section>
-			<Flex id="projects" flexDirection="column" {...rest}>
-				<Heading size="md" mb={5}>
-					<Link href="https://github.com/jordiup">Projects</Link>
-				</Heading>
-				<Grid>
-					{edges.map(({ node }) => (
-						<GridItem
-							key={node.id}
-							as="a"
-							href={node.url}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Box p={3}>
-								<Content>
-									<Heading as="h4" size="sm">
-										{node.name}
-									</Heading>
-									<p>{node.description}</p>
-								</Content>
-								<Stats>
-									<div>
-										<Icon name="star" alt="star" color="red" />
-										{/* <img src={starIcon} alt="stars" /> */}
-										<span>{node.stargazers.totalCount}</span>
-									</div>
-									<div>
-										<Icon name="gitFork" alt="forks" color="purple" />
-										<span>{node.forkCount}</span>
-									</div>
-								</Stats>
-							</Box>
-						</GridItem>
-					))}
-				</Grid>
-			</Flex>
+			<Heading size="md" mb={5}>
+				Projects
+				{/* <Link href="https://github.com/jordiup">Projects</Link> */}
+			</Heading>
+			<Grid>
+				{edges.map(({ node }) => (
+					<GridItem
+						key={node.id}
+						href={node.url}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Box p={3}>
+							<Content>
+								<Heading as="h4" size="sm">
+									{node.name}
+								</Heading>
+								<p>{node.description}</p>
+							</Content>
+							<Stats>
+								<div>
+									<Icon name="star" alt="star" color="red" />
+									{/* <img src={starIcon} alt="stars" /> */}
+									<span>{node.stargazers.totalCount}</span>
+								</div>
+								<div>
+									<Icon name="gitFork" alt="forks" color="purple" />
+									<span>{node.forkCount}</span>
+								</div>
+							</Stats>
+						</Box>
+					</GridItem>
+				))}
+			</Grid>
 		</Section>
 	);
 };

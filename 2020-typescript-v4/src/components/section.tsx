@@ -8,7 +8,7 @@ export const Section = ({ children }) => {
 				'100%', // base
 				'95%', // 480px upwards
 				'90%', // 768px upwards
-				'85%' // 992px upwards
+				'70%' // 992px upwards
 			]}
 			justifyContent="center"
 			flexDirection="column"

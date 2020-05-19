@@ -6,11 +6,13 @@ require('dotenv').config({
 
 module.exports = {
 	siteMetadata: {
-		title: `Jordi Hermoso`,
+		title: `Jordi — Frontend Developer`,
 		description: `Jordi Hermoso's portfolio website`,
 		author: `Jordi Hermoso`
 	},
 	plugins: [
+		`gatsby-plugin-typescript`, // This allows typescript
+		`gatsby-plugin-emotion`,
 		{
 			resolve: 'gatsby-plugin-chakra-ui',
 			options: {
@@ -18,7 +20,6 @@ module.exports = {
 				isUsingColorMode: true // optional, default to true
 			}
 		},
-		`gatsby-plugin-typescript`, // This allows typescript
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: 'gatsby-plugin-chakra-ui',
@@ -48,7 +49,7 @@ module.exports = {
 			}
 		}
 		// {
-		// PROPERLY CONFIGURE THIS LATER FOR PWA
+		// 	// PROPERLY CONFIGURE THIS LATER FOR PWA
 		// 	resolve: `gatsby-plugin-manifest`,
 		// 	options: {
 		// 		name: `Jordi Hermoso`,
@@ -58,7 +59,7 @@ module.exports = {
 		// 		theme_color: `#a2466c`,
 		// 		display: `standalone`
 		// 	}
-		// },
+		// }
 		// `gatsby-plugin-offline`
 	]
 };

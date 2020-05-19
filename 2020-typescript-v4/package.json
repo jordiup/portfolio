@@ -1,5 +1,5 @@
 {
-	"name": "gatsby-starter-chakra-ui",
+	"name": "jordi-hermoso-portfolio",
 	"private": true,
 	"version": "0.0.8",
 	"scripts": {
@@ -13,12 +13,13 @@
 		"emotion-theming": "^10.0.27",
 		"gatsby": "2.15.0",
 		"gatsby-plugin-chakra-ui": "^0.1.4",
+		"gatsby-plugin-emotion": "^4.3.1",
 		"gatsby-plugin-manifest": "^2.4.3",
 		"gatsby-plugin-react-helmet": "^3.3.1",
 		"gatsby-plugin-typescript": "^2.4.2",
 		"gatsby-source-graphql": "^2.5.1",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
+		"react": "^16.8.0",
+		"react-dom": "^16.8.0",
 		"react-helmet": "^6.0.0",
 		"react-tilt": "^0.1.4"
 	},

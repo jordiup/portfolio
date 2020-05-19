@@ -1,19 +1,20 @@
 ## Feature list
 
-- MVP Version of site
+- MVP Version of site ✅
   - Header ✅
-  - GridPics
+  - GridPics ✅
   - About ✅
   - Footer ✅
   - Github Projects ✅
-- Full light/dark theming
-- React Helmet SEO integration in <Header> component ✅
-- Zeit (Vercel) og:image creation
-- Blog with Medium integration
-- Claim some cool domains
-- 'How I Made This' section
-- Add a portfolio section that showcases work (design + dev)
-- Animated og meta title
+- Claim some cool domains ✅
 - gatsby-source-graphql for private api fetching ✅
+- React Helmet SEO integration in <Header> component ✅
+- Full light/dark theming ✅
+  - Improved light/dark themeing. Grays.
+- Zeit (Vercel) og:image creation
+- 'How I Made This' section
+- Animated og meta title
+- Add a portfolio section that showcases work (design + dev)
+- Blog with Medium integration
 
 <!-- - Typography.js fonts -->
