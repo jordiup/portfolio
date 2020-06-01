@@ -22,8 +22,8 @@ const IndexPage = () => {
 				alignItems="center"
 				flexDirection="column"
 			>
-				<Section>
-					<Box id="#about" mb={10}>
+				<Section id="about">
+					<Box mb={10}>
 						<Heading size="md" mb={5}>
 							About
 						</Heading>

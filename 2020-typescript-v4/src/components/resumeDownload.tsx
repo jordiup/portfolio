@@ -65,7 +65,7 @@ export const ResumeDownload = props => {
 	const { ...rest } = props;
 
 	return (
-		<Section>
+		<Section id="resume">
 			<Wrapper id="about" {...rest}>
 				<SkillsWrapper>
 					{/* <Thumbnail>

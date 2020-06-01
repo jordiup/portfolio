@@ -1,4 +1,4 @@
-import React, { ReactChildren, ReactChild } from 'react';
+import React, { ReactChildren, ReactChild, ReactElement } from 'react';
 import { Flex, FlexProps } from '@chakra-ui/core';
 
 export const Section = ({

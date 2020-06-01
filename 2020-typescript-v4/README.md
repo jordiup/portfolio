@@ -19,5 +19,6 @@
 - Animated og meta title
 - Blog with Medium integration
 - Optimize images/load speeds
+    - Images ✅ 
 
 <!-- - Typography.js fonts -->

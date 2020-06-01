@@ -103,7 +103,7 @@ export const GithubProjects = () => {
 	console.log(edges);
 
 	return (
-		<Section>
+		<Section id="projects">
 			<Heading size="md" mb={5}>
 				Projects
 				{/* <Link href="https://github.com/jordiup">Projects</Link> */}

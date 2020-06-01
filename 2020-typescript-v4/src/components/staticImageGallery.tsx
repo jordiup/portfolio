@@ -130,17 +130,17 @@ export const StaticImageGallery = ({
 				<ModalOverlay />
 				<ModalContent bg="none" shadow="none">
 					<ModalCloseButton zIndex={99} top={4} right={8} bg="white" />
-					<ModalBody>
-						{/* <Img fluid={selectedModalImage.childImageSharp.fluid}
-							key="modal"
-							style={{ height: "100%", width: "100%" }}
-						/> */}
-						{selectedModalImage ? <Image src={selectedModalImage.publicURL} width="100%" /> : ""}
-						{/* <img srcset={selectedModalImage.srcSet}
-							sizes={selectedModalImage.sizes}
-							src={selectedModalImage.src}
-							alt="Elva dressed as a fairy" /> */}
-
+					<ModalBody justifyContent="center" display="flex"
+					// maxHeight="100vh"
+					>
+						{selectedModalImage ? <Image src={selectedModalImage.publicURL}
+							maxWidth={[
+								"100%", // base
+								"95%", // 480px upwards
+								"90%", // 768px upwards
+								"90%", // 992px upwards
+							]}
+						/> : "loading..."}
 					</ModalBody>
 				</ModalContent>
 			</Modal>
