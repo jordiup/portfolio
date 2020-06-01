@@ -2,8 +2,9 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Image, Flex } from '@chakra-ui/core';
+import { Image, Flex, Box } from '@chakra-ui/core';
 import { CenteredSpinner } from './centeredSpinner';
+import Img from "gatsby-image";
 
 export const StaticImageGallery = ({
 	relativeDirectory
@@ -30,6 +31,16 @@ export const StaticImageGallery = ({
 						name
 						relativePath
 						publicURL
+						childImageSharp {
+							# i.e. the max width of your container is 700 pixels.
+							#
+							# Other options include maxHeight (set both maxWidth and maxHeight to crop),
+							# grayscale, duotone, rotate, etc.
+							fluid (maxHeight: 200, quality: 100) {
+								...GatsbyImageSharpFluid
+								presentationWidth
+										}
+						}
 					}
 				}
 			}
@@ -42,11 +53,38 @@ export const StaticImageGallery = ({
 	console.log(edgesArr);
 
 	return (
-		<Flex flexWrap="nowrap" overflowX="scroll" justifyContent="spaceBetween">
+		<Flex flexWrap="nowrap" overflowX="scroll" justifyContent="spaceBetween" py={4}>
 			{edgesArr.length > 0 ? (
 				edgesArr.map((element, i) => {
+					console.log(element.node.childImageSharp.fluid.presentationWidth + "px")
 					return (
-						<Image
+						// <Image
+						// 	css={css`
+						// 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
+						// 			rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+						// 		cursor: pointer;
+						// 		transition: all ease-in 0.1s;
+						// 		&:hover {
+						// 			transform: scale(1.03);
+						// 		}
+						// 	`}
+						// 	key={i}
+						// 	height="200px"
+						// 	// rounded="5px"
+						// 	mb={2}
+						// 	mr={2}
+						// 	// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
+						// 	// src={'./' + element.node.relativePath}
+						// 	as={Img}
+						// 	// fluid={element.node.childImageSharp.fluid}
+						// />
+						<Box
+							key={i}
+							height="200px"
+							minWidth={element.node.childImageSharp.fluid.presentationWidth + "px"}
+							mb={2}
+							mr={2}
+							// rounded="5px"
 							css={css`
 								box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
 									rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
@@ -56,19 +94,20 @@ export const StaticImageGallery = ({
 									transform: scale(1.03);
 								}
 							`}
-							key={i}
-							height="200px"
-							// rounded="5px"
-							mb={2}
-							mr={2}
-							// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
-							src={'./' + element.node.relativePath}
-						/>
+						// onClick=
+						>
+							<Img fluid={element.node.childImageSharp.fluid} key={i}
+								imgStyle={{ height: "200px" }}
+								style={{ height: "100%", width: "100%" }}
+								placeholderStyle={{ height: "200px", width: 200 }}
+							// imgStyle={{ height: "200px", display: "block", position: "relative" }}
+							/>
+						</Box>
 					);
 				})
 			) : (
-				<CenteredSpinner />
-			)}
+					<CenteredSpinner />
+				)}
 		</Flex>
 	);
 };

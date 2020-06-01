@@ -48,11 +48,13 @@ module.exports = {
 				fetchOptions: {}
 			}
 		},
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `portfolio-images`,
-				path: `./static/`
+				path: `${__dirname}/static/`
 			}
 		},
 		{

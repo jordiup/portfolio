@@ -18,5 +18,6 @@
 - 'How I Made This' section
 - Animated og meta title
 - Blog with Medium integration
+- Optimize images/load speeds
 
 <!-- - Typography.js fonts -->
