@@ -53,7 +53,7 @@ const Stats = styled(Box)`
 
 	div {
 		display: flex;
-		&:first-child {
+		&:first-of-type {
 			margin-right: 0.5rem;
 		}
 

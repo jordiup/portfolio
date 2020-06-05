@@ -9,6 +9,7 @@ import { HeroGridPics } from '../components/heroGridPics';
 import { ResumeDownload } from '../components/resumeDownload';
 import { Section } from '../components/section';
 import { StaticImageGallery } from '../components/staticImageGallery';
+import { Technologies } from '../components/technologies';
 
 const IndexPage = () => {
 	return (
@@ -37,6 +38,7 @@ const IndexPage = () => {
 					</Box>
 				</Section>
 				<GithubProjects />
+				<Technologies />
 				<Section mt={6}>
 					<Heading size="md" mb={5}>
 						Gallery

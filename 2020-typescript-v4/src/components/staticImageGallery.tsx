@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Image, Flex, Box, useDisclosure, Button } from '@chakra-ui/core';
+import { Image, Flex, Box, useDisclosure, Button, LightMode } from '@chakra-ui/core';
 import { CenteredSpinner } from './centeredSpinner';
 import Img from "gatsby-image";
 
@@ -62,7 +62,7 @@ export const StaticImageGallery = ({
 	let edgesArr = Object.values(edges);
 
 	// console.log(edges);
-	console.log(edgesArr);
+	// console.log(edgesArr);
 
 	return (
 		<>
@@ -109,7 +109,7 @@ export const StaticImageGallery = ({
 								onClick={() => {
 									onOpen()
 									useSelectedModalImage(element.node)
-									console.log(element.node)
+									// console.log(element.node)
 								}}
 							>
 								<Img fluid={element.node.childImageSharp.fluid} key={i}
@@ -129,7 +129,9 @@ export const StaticImageGallery = ({
 			<Modal isOpen={isOpen} onClose={onClose} size="full" >
 				<ModalOverlay />
 				<ModalContent bg="none" shadow="none">
-					<ModalCloseButton zIndex={99} top={4} right={8} bg="white" />
+					<LightMode>
+						<ModalCloseButton zIndex={99} top={4} right={8} bg="white" />
+					</LightMode>
 					<ModalBody justifyContent="center" display="flex"
 					// maxHeight="100vh"
 					>

@@ -45,7 +45,11 @@ export const Header = props => {
 				</Link>
 			</Flex>
 
-			<Flex alignItems="center" ml="auto">
+			<Flex alignItems="center"
+				// ml={0}
+				ml={{ xs: 0, sm: "auto" }}
+			// ml={["auto", "0", "0", "0"]}
+			>
 				<MenuItems>About</MenuItems>
 				<MenuItems>Projects</MenuItems>
 				<MenuItems>Resume</MenuItems>

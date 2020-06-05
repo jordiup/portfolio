@@ -50,9 +50,9 @@ export const SEO = ({ description, lang, meta, title }) => {
 
 	// const site = api.UseSite;
 
-	const metaDescription = description || site.siteMetadata.description;
+	const metaDescription = site.siteMetadata.description || description;
 
-	console.log(site.siteMetadata);
+	// console.log(site.siteMetadata, metaDescription);
 
 	// var text = ['Welcome', 'Hi', 'Sup dude'];
 	// var counter = 0;
@@ -75,10 +75,11 @@ export const SEO = ({ description, lang, meta, title }) => {
 			title={title || site.siteMetadata.title}
 			titleTemplate={title ? `%s | ${site.siteMetadata.title}` : ``}
 			meta={[
-				{
-					name: `description`,
-					content: metaDescription
-				},
+				// This one doesn't seem to work :(
+				// {
+				// 	property: `description`,
+				// 	content: metaDescription
+				// },
 				{
 					property: `og:title`,
 					content: title
@@ -95,11 +96,13 @@ export const SEO = ({ description, lang, meta, title }) => {
 			].concat(meta)}
 		>
 			<link
-				href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap"
+				// href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" // look at streamlining this
+				href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700;800&display=swap" // streamlined fonts as of 06/2020
 				rel="stylesheet"
 			></link>
 			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+			<meta name="description" content={metaDescription} />
 			<meta
 				property="og:image"
 				content="https://og-image.now.sh/**Jordi**%20Hermoso%20%3Cbr%3E%F0%9F%8C%8F.png?theme=dark&md=1&fontSize=150px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg&widths=150&heights=150"
@@ -121,5 +124,5 @@ SEO.propTypes = {
 	description: PropTypes.string,
 	lang: PropTypes.string,
 	meta: PropTypes.arrayOf(PropTypes.object),
-	title: PropTypes.string.isRequired
+	title: PropTypes.string
 };

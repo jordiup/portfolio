@@ -66,23 +66,24 @@ export const ResumeDownload = props => {
 
 	return (
 		<Section id="resume">
-			<Wrapper id="about" {...rest}>
+			<Wrapper {...rest}>
 				<SkillsWrapper>
 					{/* <Thumbnail>
 				<img src={dev} alt="I’m Jordi and I’m a frontend engineer!" />
 			</Thumbnail> */}
 					<Details>
 						<Heading as="h1">Resume</Heading>
-						<Heading as="h2" color="#707070" size="lg" mt={3} fontWeight="500">
+						<Heading as="h2" color="#9e9e9e" size="lg" mt={3} fontWeight="500">
 							Download my latest resume to see my experiences.
 						</Heading>
 
 						<Button
 							as="a"
 							mt={6}
-							href="https://drive.google.com/open?id=1nulEXvdBl0egaAmG7t1ixQjNhOyMomk5"
+							href="https://drive.google.com/file/d/1qRq7R7bQvgJqVbFPr4wdNYgTV0E3MwdS/view?usp=sharing"
 							target="_blank"
 							className="darkmode-ignore"
+							rel="noopener"
 						>
 							Download
 						</Button>

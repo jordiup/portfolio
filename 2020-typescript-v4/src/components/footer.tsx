@@ -39,10 +39,10 @@ export const Footer = props => {
 				{/* <span>Illustrations by Katerina Limpitsouni - Undraw</span> */}
 			</Flex>
 			<Flex mr="38px">
-				<Link href="https://github.com/jordiup" mr={5}>
+				<Link href="https://github.com/jordiup" mr={5} alt="Github">
 					<Icon name="github" size="34px" />
 				</Link>
-				<Link href="https://linkedin.com/in/jordihermoso" mr={5}>
+				<Link href="https://linkedin.com/in/jordihermoso" mr={5} alt="LinkedIn">
 					<Icon name="linkedin" size="34px" />
 				</Link>
 				{/* {social.map(({ id, name, link, icon }) => (
