@@ -93,14 +93,14 @@ export const IntroWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 
+	@media (max-width: 450px) {
+		padding-top: 1rem;
+		padding-bottom: 0rem;
+	}
 	@media (max-width: 960px) {
 		flex-direction: column;
 	}
 `;
-
-// export const styled.Tilt`
-
-// `
 
 const tiltOptions = {
 	reverse: true, // reverse the tilt direction

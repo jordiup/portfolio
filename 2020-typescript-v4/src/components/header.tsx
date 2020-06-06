@@ -2,6 +2,7 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react';
 import { Box, Heading, Flex, Text, Button, Link } from '@chakra-ui/core';
+import { GradientHeading } from './gradientHeading';
 
 const MenuItems = ({ children }) => (
 	<Link
@@ -30,18 +31,22 @@ export const Header = props => {
 	return (
 		<Flex as="nav" flexDirection="row" wrap="wrap" padding="1.5rem" {...props}>
 			<Flex align="center" mr={5}>
-				<Link href="/">
-					<Heading
+				<Link href="/"
+					css={css`
+						&:hover {
+						text-decoration: none;
+						}
+					`}
+
+				>
+					<GradientHeading
 						as="h1"
 						size="lg"
+						pr={2}
 						letterSpacing={'-.1rem'}
-						css={css`
-							&hover: text-decoration: none;
-							text-decoration: none;
-						`}
 					>
 						Jordi Hermoso
-					</Heading>
+					</GradientHeading>
 				</Link>
 			</Flex>
 

@@ -28,7 +28,7 @@ const animatedTextArray = () => {
 		if (count >= arr.length) {
 			count = 0;
 		}
-		console.log(arr[count]);
+		// console.log(arr[count]);
 		return arr[count];
 	}, 500);
 };

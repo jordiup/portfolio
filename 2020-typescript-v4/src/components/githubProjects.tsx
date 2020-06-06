@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Flex, Box, Link, Heading, Icon, useColorMode } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 import { Section } from './section';
+import { GradientHeading } from './gradientHeading';
 // import starIcon from 'Static/icons/star.svg'
 // import forkIcon from 'Static/icons/fork.svg'
 // import { Wrapper, Grid, Item, Content, Stats } from './styles';
@@ -104,10 +105,10 @@ export const GithubProjects = () => {
 
 	return (
 		<Section id="projects">
-			<Heading size="md" mb={5}>
-				Projects
+			<GradientHeading size="md" mb={5}>
+				Some of my projects
 				{/* <Link href="https://github.com/jordiup">Projects</Link> */}
-			</Heading>
+			</GradientHeading>
 			<Grid>
 				{edges.map(({ node }) => (
 					<GridItem

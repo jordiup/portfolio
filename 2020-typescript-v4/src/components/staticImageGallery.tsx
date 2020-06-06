@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Image, Flex, Box, useDisclosure, Button, LightMode } from '@chakra-ui/core';
+import { Image, Flex, Box, useDisclosure, Button, LightMode, Heading, Stack } from '@chakra-ui/core';
 import { CenteredSpinner } from './centeredSpinner';
 import Img from "gatsby-image";
 
@@ -14,6 +14,8 @@ import {
 	ModalBody,
 	ModalCloseButton,
 } from "@chakra-ui/core";
+import { Section } from './section';
+import { GradientHeading } from './gradientHeading';
 
 export const StaticImageGallery = ({
 	relativeDirectory
@@ -65,39 +67,51 @@ export const StaticImageGallery = ({
 	// console.log(edgesArr);
 
 	return (
-		<>
-			<Flex flexWrap="nowrap" overflowX="scroll" justifyContent="spaceBetween" py={4}>
-				{edgesArr.length > 0 ? (
-					edgesArr.map((element, i) => {
-						return (
-							// <Image
-							// 	css={css`
-							// 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
-							// 			rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
-							// 		cursor: pointer;
-							// 		transition: all ease-in 0.1s;
-							// 		&:hover {
-							// 			transform: scale(1.03);
-							// 		}
-							// 	`}
-							// 	key={i}
-							// 	height="200px"
-							// 	// rounded="5px"
-							// 	mb={2}
-							// 	mr={2}
-							// 	// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
-							// 	// src={'./' + element.node.relativePath}
-							// 	as={Img}
-							// 	// fluid={element.node.childImageSharp.fluid}
-							// />
-							<Box
-								key={i}
-								height="200px"
-								minWidth={element.node.childImageSharp.fluid.presentationWidth + "px"}
-								mb={2}
-								mr={2}
-								// rounded="5px"
-								css={css`
+		<Section>
+			<GradientHeading size="md" mb={5}>
+				Gallery
+				{/* Web, UI & UX */}
+			</GradientHeading>
+			{/* <Text>
+				This section of my portfolio showcases web design projects I've
+				undertaken. Projects have been carried out with a number of
+				companies, not-for-profit organisations, and startups. It showcases
+				work that is live on the web, as well as interactive prototypes
+				developed with popular ui/ux software.
+			</Text> */}
+			<Stack isInline>
+				<Flex flexWrap="nowrap" overflowX="scroll" justifyContent="spaceBetween" py={4}>
+					{edgesArr.length > 0 ? (
+						edgesArr.map((element, i) => {
+							return (
+								// <Image
+								// 	css={css`
+								// 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
+								// 			rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+								// 		cursor: pointer;
+								// 		transition: all ease-in 0.1s;
+								// 		&:hover {
+								// 			transform: scale(1.03);
+								// 		}
+								// 	`}
+								// 	key={i}
+								// 	height="200px"
+								// 	// rounded="5px"
+								// 	mb={2}
+								// 	mr={2}
+								// 	// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
+								// 	// src={'./' + element.node.relativePath}
+								// 	as={Img}
+								// 	// fluid={element.node.childImageSharp.fluid}
+								// />
+								<Box
+									key={i}
+									height="200px"
+									minWidth={element.node.childImageSharp.fluid.presentationWidth + "px"}
+									mb={2}
+									mr={2}
+									// rounded="5px"
+									css={css`
 								box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
 									rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
 								cursor: pointer;
@@ -106,25 +120,27 @@ export const StaticImageGallery = ({
 									transform: scale(1.03);
 								}
 							`}
-								onClick={() => {
-									onOpen()
-									useSelectedModalImage(element.node)
-									// console.log(element.node)
-								}}
-							>
-								<Img fluid={element.node.childImageSharp.fluid} key={i}
-									imgStyle={{ height: "200px" }}
-									style={{ height: "100%", width: "100%" }}
-									placeholderStyle={{ height: "200px", width: 200 }}
-								// imgStyle={{ height: "200px", display: "block", position: "relative" }}
-								/>
-							</Box>
-						);
-					})
-				) : (
-						<CenteredSpinner />
-					)}
-			</Flex>
+									onClick={() => {
+										onOpen()
+										useSelectedModalImage(element.node)
+										// console.log(element.node)
+									}}
+								>
+									<Img fluid={element.node.childImageSharp.fluid} key={i}
+										imgStyle={{ height: "200px" }}
+										style={{ height: "100%", width: "100%" }}
+										placeholderStyle={{ height: "200px", width: 200 }}
+									// imgStyle={{ height: "200px", display: "block", position: "relative" }}
+									/>
+								</Box>
+							);
+						})
+					) : (
+							<CenteredSpinner />
+						)}
+				</Flex>
+			</Stack>
+
 
 			<Modal isOpen={isOpen} onClose={onClose} size="full" >
 				<ModalOverlay />
@@ -146,6 +162,6 @@ export const StaticImageGallery = ({
 					</ModalBody>
 				</ModalContent>
 			</Modal>
-		</>
+		</Section>
 	);
 };

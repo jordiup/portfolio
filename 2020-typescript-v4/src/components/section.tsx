@@ -19,6 +19,7 @@ export const Section = ({
 			justifyContent="center"
 			flexDirection="column"
 			{...rest}
+			my={6}
 		>
 			{children}
 		</Flex>

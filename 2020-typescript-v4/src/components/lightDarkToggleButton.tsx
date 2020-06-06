@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Text, useColorMode } from '@chakra-ui/core';
 
-export const ColourModeHookTester = () => {
+export const LightDarkToggleButton = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	function matchingEmoji() {

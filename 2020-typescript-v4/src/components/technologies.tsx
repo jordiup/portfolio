@@ -2,28 +2,30 @@
 import { css, jsx } from '@emotion/core';
 import React from 'react'
 import technologiesJSON from '../utils/technologiesJSON.js'
-import { Flex, Image, Box, Heading } from '@chakra-ui/core'
+import { Flex, Image, Box, Heading, useColorMode } from '@chakra-ui/core'
 import { Section } from './section';
+import { GradientHeading } from './gradientHeading';
 
 export const Technologies = () => {
 
     let cdnUrl = 'https://cdn.jsdelivr.net/npm/simple-icons@v2/icons/'
-    console.log(technologiesJSON)
-    // technologiesJSON.map(el => console.log(el.key))
+
+    const { colorMode } = useColorMode();
 
     return (
-        <Section my={6 * 2}>
-            <Heading size="md" mb={5} width="100%" >
-                Technologies
+        <Section>
+            <GradientHeading size="md" mb={5} width="100%" >
+                Technologies I've worked with
 						{/* Web, UI & UX */}
-            </Heading>
+            </GradientHeading>
             <Flex flexWrap="wrap" justifyContent="left">
 
                 {technologiesJSON.map(el =>
-                    <Flex flexDir="row" rounded={8} padding={3} m={1}
+                    <Flex flexDir="row" rounded={8} padding={3} m={1} key={el.displayName}
                         css={css`
                             img {
-                                /* filter: invert(1) */
+                                filter: invert(${colorMode === "light" ? 0 : 1});
+                                opacity: .8;
                             }
                             /* color: white; */
                             font-weight: 500;
