@@ -27,14 +27,14 @@ const IndexPage = () => {
 				<Section id="about">
 					<GradientHeading size="md" mb={5}>
 						About
-						</GradientHeading>
+					</GradientHeading>
 					<Text>
-						I'm a Frontend Developer specializing in React. I've just
-						graduated with a Computer Science degree. I have a strong passion
-						for software development, design and data analysis. As well as the
-						way these can impact people and businesses around the world. I'm
-						hardworking, and always interested in learning something new.
-						</Text>
+						I'm a Frontend Developer specializing in React. I've just graduated
+						with a Computer Science degree. I have a strong passion for software
+						development, design and data analysis. As well as the way these can
+						impact people and businesses around the world. I'm hardworking, and
+						always interested in learning something new.
+					</Text>
 				</Section>
 				<Technologies />
 				<GithubProjects />

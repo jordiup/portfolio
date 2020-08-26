@@ -3,14 +3,16 @@
 	"private": true,
 	"version": "0.0.8",
 	"scripts": {
-		"dev": "gatsby develop",
-		"start": "gatsby develop",
-		"build": "gatsby build"
+		"dev": "gatsby develop -p 4200",
+		"start": "gatsby develop -p 4200",
+		"build": "gatsby build",
+		"refresh": "gatsby clean && gatsby develop -p 4200"
 	},
 	"dependencies": {
 		"@chakra-ui/core": "^0.7.0",
 		"@emotion/core": "^10.0.28",
 		"@emotion/styled": "^10.0.27",
+		"date-fns": "^2.15.0",
 		"emotion-theming": "^10.0.27",
 		"gatsby": "2.15.0",
 		"gatsby-image": "^2.4.5",
