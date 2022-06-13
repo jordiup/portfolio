@@ -100,6 +100,7 @@ export const SEO = ({ description, lang, meta, title }) => {
 				href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;700;800&display=swap" // streamlined fonts as of 06/2020
 				rel="stylesheet"
 			></link>
+			<script defer data-domain="jordi.app" src="https://plausible.io/js/plausible.js"/>
 			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 			<meta name="description" content={metaDescription} />
