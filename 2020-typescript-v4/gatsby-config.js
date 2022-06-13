@@ -58,6 +58,12 @@ module.exports = {
 			}
 		},
 		{
+			resolve: `gatsby-plugin-plausible`,
+			options: {
+				domain: `jordi.app`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
 				trackingId: 'UA-145106492-1'
