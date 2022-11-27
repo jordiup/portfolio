@@ -72,9 +72,9 @@ export const GithubProjects = () => {
 	const {
 		github: {
 			user: {
-				pinnedItems: { edges }
-			}
-		}
+				pinnedItems: { edges },
+			},
+		},
 	} = useStaticQuery(graphql`
 		{
 			github {
@@ -110,13 +110,20 @@ export const GithubProjects = () => {
 				{/* <Link href="https://github.com/jordiup">Projects</Link> */}
 			</GradientHeading>
 			<Grid>
-				{edges.map(({ node }) => (
-					<GridItem
-						key={node.id}
-						href={node.url}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+				{[
+					{
+						node: {
+							id: 1,
+							name: 'Sharehouse',
+							description: `A side project I'm working on. A rental marketplace for housemates`,
+							url: 'https://sharehouse.app?ref=portfolio',
+							stargazers: { totalCount: 0 },
+							forkCount: 0,
+						},
+					},
+					...edges,
+				].map(({ node }) => (
+					<GridItem key={node.id} href={node.url} target="_blank">
 						<Box p={3}>
 							<Content>
 								<Heading as="h4" size="sm">
