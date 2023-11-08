@@ -96,68 +96,69 @@ export const StaticImageGallery = ({
 					py={4}
 				>
 					{edgesArr.length > 0 ? (
-						edgesArr.
-						// sort by file name
-						.sort((a, b) => {
-							return a.node.name.localeCompare(b.node.name);
-						})
-						.map((element, i) => {
-							return (
-								// <Image
-								// 	css={css`
-								// 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
-								// 			rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
-								// 		cursor: pointer;
-								// 		transition: all ease-in 0.1s;
-								// 		&:hover {
-								// 			transform: scale(1.03);
-								// 		}
-								// 	`}
-								// 	key={i}
-								// 	height="200px"
-								// 	// rounded="5px"
-								// 	mb={2}
-								// 	mr={2}
-								// 	// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
-								// 	// src={'./' + element.node.relativePath}
-								// 	as={Img}
-								// 	// fluid={element.node.childImageSharp.fluid}
-								// />
-								<Box
-									key={i}
-									height="200px"
-									minWidth={
-										element.node.childImageSharp.fluid.presentationWidth + 'px'
-									}
-									mb={2}
-									mr={2}
-									// rounded="5px"
-									css={css`
-										box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
-											rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
-										cursor: pointer;
-										transition: all ease-in 0.1s;
-										&:hover {
-											transform: scale(1.03);
-										}
-									`}
-									onClick={() => {
-										onOpen();
-										useSelectedModalImage(element.node);
-										// console.log(element.node)
-									}}
-								>
-									<Img
-										fluid={element.node.childImageSharp.fluid}
+						edgesArr
+							// sort by file name
+							.sort((a, b) => {
+								return a.node.name.localeCompare(b.node.name);
+							})
+							.map((element, i) => {
+								return (
+									// <Image
+									// 	css={css`
+									// 		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
+									// 			rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+									// 		cursor: pointer;
+									// 		transition: all ease-in 0.1s;
+									// 		&:hover {
+									// 			transform: scale(1.03);
+									// 		}
+									// 	`}
+									// 	key={i}
+									// 	height="200px"
+									// 	// rounded="5px"
+									// 	mb={2}
+									// 	mr={2}
+									// 	// boxShadow="rgba(0, 0, 0, 0.08) 0px 4px 12px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;"
+									// 	// src={'./' + element.node.relativePath}
+									// 	as={Img}
+									// 	// fluid={element.node.childImageSharp.fluid}
+									// />
+									<Box
 										key={i}
-										imgStyle={{ height: '200px' }}
-										style={{ height: '100%', width: '100%' }}
-										placeholderStyle={{ height: '200px', width: 200 }}
-										// imgStyle={{ height: "200px", display: "block", position: "relative" }}
-									/>
-								</Box>
-							);
-						})
+										height="200px"
+										minWidth={
+											element.node.childImageSharp.fluid.presentationWidth +
+											'px'
+										}
+										mb={2}
+										mr={2}
+										// rounded="5px"
+										css={css`
+											box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px,
+												rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
+											cursor: pointer;
+											transition: all ease-in 0.1s;
+											&:hover {
+												transform: scale(1.03);
+											}
+										`}
+										onClick={() => {
+											onOpen();
+											useSelectedModalImage(element.node);
+											// console.log(element.node)
+										}}
+									>
+										<Img
+											fluid={element.node.childImageSharp.fluid}
+											key={i}
+											imgStyle={{ height: '200px' }}
+											style={{ height: '100%', width: '100%' }}
+											placeholderStyle={{ height: '200px', width: 200 }}
+											// imgStyle={{ height: "200px", display: "block", position: "relative" }}
+										/>
+									</Box>
+								);
+							})
 					) : (
 						<CenteredSpinner />
 					)}
