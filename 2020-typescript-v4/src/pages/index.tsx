@@ -16,7 +16,7 @@ const IndexPage = () => {
 	// useEffect that sends an alert on mount :)))
 	useEffect(() => {
 		alert(
-			'This portfolio site is currently 3 years out of date, and in need of a refresh!\n To see my latest work, please see my LinkedIn/Github profiles. Cheers.'
+			'This portfolio site is currently 3 years out of date, and in need of a refresh!\nTo see my latest work, please see my LinkedIn/Github profiles, and expect an updated site shortly.\nCheers.'
 		);
 	}, []);
 
