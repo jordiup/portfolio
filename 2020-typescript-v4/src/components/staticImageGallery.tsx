@@ -96,7 +96,12 @@ export const StaticImageGallery = ({
 					py={4}
 				>
 					{edgesArr.length > 0 ? (
-						edgesArr.map((element, i) => {
+						edgesArr.
+						// sort by file name
+						.sort((a, b) => {
+							return a.node.name.localeCompare(b.node.name);
+						})
+						.map((element, i) => {
 							return (
 								// <Image
 								// 	css={css`
