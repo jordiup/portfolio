@@ -61,7 +61,7 @@ export const Thumbnail = styled(Box)`
 	}
 `;
 
-export const ResumeDownload = props => {
+export const ResumeDownload = (props) => {
 	const { ...rest } = props;
 
 	return (
@@ -80,7 +80,7 @@ export const ResumeDownload = props => {
 						<Button
 							as="a"
 							mt={6}
-							href="https://drive.google.com/file/d/1qRq7R7bQvgJqVbFPr4wdNYgTV0E3MwdS/view?usp=sharing"
+							href="https://drive.google.com/file/d/1lCaoKpIzPZ24UVcukJdO0FarUVtAQS-J/view?usp=sharing"
 							target="_blank"
 							className="darkmode-ignore"
 							rel="noopener"
