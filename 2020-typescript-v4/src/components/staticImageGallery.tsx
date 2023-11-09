@@ -94,21 +94,21 @@ export const StaticImageGallery = ({
 					overflowX="scroll"
 					justifyContent="spaceBetween"
 					py={4}
-					sx={{
-						'&::-webkit-scrollbar': {
-							bg: 'none',
-						},
-						'&::-webkit-scrollbar-track': {
-							bg: 'none',
-						},
-						'&::-webkit-scrollbar-thumb': {
-							bg: 'border',
-							width: '4px',
-							borderRadius: '0px',
-							border: '3px solid transparent',
-							backgroundClip: 'content-box',
-						},
-					}}
+					css={css`
+						&::-webkit-scrollbar {
+							background: 'none';
+						}
+						&::-webkit-scrollbar-track {
+							background: 'none';
+						}
+						&::-webkit-scrollbar-thumb {
+							background: 'border';
+							width: '4px';
+							border-radius: '0px';
+							border: '3px solid transparent';
+							background-clip: 'content-box';
+						}
+					`}
 				>
 					{edgesArr.length > 0 ? (
 						edgesArr
